@@ -10,7 +10,7 @@
     <div class="container">
         <div class="header">
             <h1>Informacion de usuario</h1>
-            <p class="current-date"></p>
+            <p id="current-date"></p>
         </div>
         <div class="result-user" id="result-user">
             <!-- Datos usuario nacimiento -->
@@ -19,42 +19,8 @@
             <p id="time-user"></p>
             <p id="age-user"></p>
         </div>
-        <button id="returnToIndex1" class="btn-return">Volver</button>
+        <button id="btn-return" class="btn-return">Volver</button>
     </div>
 </body>
-<script>
-    const userData = JSON.parse(sessionStorage.getItem('user'));
-
-    function agregarCeroToHour(n) {
-        return String(n).padStart(2, '0');
-    }
-
-    function formatTimeTo12h(h, m, s) {
-        if (typeof h !== 'number' || typeof m !== 'number' || typeof s !== 'number') return '';
-        const medioDia = h >= 12 ? 'p. m.' : 'a. m.';
-        const h12 = ((h + 11) % 12) + 1; // convierte 0->12, 13->1, etc.
-        return `${agregarCeroToHour(h12)}:${agregarCeroToHour(m)}:${agregarCeroToHour(s)} ${medioDia}`;
-    }
-
-    if (!userData) {
-        document.getElementById('name-user').innerText = 'No hay datos de usuario. Regresa al formulario.';
-    } else {
-        document.getElementById('name-user').innerText = `Nombre: ${userData.name}`;
-        document.getElementById('date-user').innerText = `Fecha de Nacimiento: ${userData.year}-${agregarCeroToHour(userData.month)}`;
-
-        const formatted12h = formatTimeTo12h(userData.hour, userData.minute, userData.second);
-        const formatted24h = `${agregarCeroToHour(userData.hour)}:${agregarCeroToHour(userData.minute)}:${agregarCeroToHour(userData.second)}`;
-        const timeText = formatted12h ? `${formatted12h} (24h: ${formatted24h})` : 'Hora no válida';
-
-        const elTime = document.getElementById('time-user');
-        elTime.innerText = `Hora de Nacimiento: ${timeText}`;
-
-        const currentDate = new Date();
-        const age = currentDate.getFullYear() - userData.year;
-        document.getElementById('age-user').innerText = `Edad: ${age} años`;
-        const currentDateEl = document.querySelector('.current-date');
-        currentDateEl.innerText = currentDate.toLocaleDateString();
-    }
-</script>
-<script src="scriptDate.js"></script>
+<script src="script2.js"></script>
 </html>

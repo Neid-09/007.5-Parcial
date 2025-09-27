@@ -9,71 +9,88 @@
 
   <body>
     <div class="container">
-      <h1>Informacion de usuario</h1>
+      <h1>Formulario de usuario</h1>
       <form class="form-user" id="form-user" action="index2.html" method="POST">
         <!-- Datos usuario nacimiento -->
-        <label for="name">Nombre:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Ingrese su nombre"
-          required
-        />
+        <div class="form-group">
+          <label for="name">Nombre completo:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Ingrese su nombre completo"
+            required
+          />
+        </div>
 
-        <label for="year">Año de Nacimiento:</label>
-        <input
-          type="number"
-          id="year"
-          name="year"
-          placeholder="Ingrese su año de nacimiento"
-          required
-        />
+        <div class="form-group">
+          <label for="year">Año de Nacimiento:</label>
+          <input
+            type="number"
+            id="year"
+            name="year"
+            placeholder="Ej. 1990"
+            required
+          />
+        </div>
 
-        <label for="month">Mes de Nacimiento:</label>
-        <input
-          type="number"
-          id="month"
-          name="month"
-          min="1"
-          max="12"
-          placeholder="Ingrese su mes de nacimiento"
-          required
-        />
+        <div class="form-group">
+          <label for="month">Mes de Nacimiento:</label>
+          <select name="month" id="month">
+            <option value="" disabled selected>Seleccione su mes</option>
+            <option value="1">Enero</option>
+            <option value="2">Febrero</option>
+            <option value="3">Marzo</option>
+            <option value="4">Abril</option>
+            <option value="5">Mayo</option>
+            <option value="6">Junio</option>
+            <option value="7">Julio</option>
+            <option value="8">Agosto</option>
+            <option value="9">Septiembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Noviembre</option>
+            <option value="12">Diciembre</option>
+          </select>
+        </div>
 
-        <label for="hour">Hora de Nacimiento:</label>
-        <input
-          type="number"
-          id="hour"
-          name="hour"
-          min="0"
-          max="23"
-          placeholder="Ingrese su hora de nacimiento"
-          required
-        />
+        <div class="form-group">
+          <label for="hour">Hora de Nacimiento:</label>
+          <input
+            type="number"
+            id="hour"
+            name="hour"
+            min="0"
+            max="23"
+            placeholder="0 - 23 hrs"
+            required
+          />
+        </div>
 
-        <label for="minute">Minuto de Nacimiento:</label>
-        <input
-          type="number"
-          id="minute"
-          name="minute"
-          min="0"
-          max="59"
-          placeholder="Ingrese su minuto de nacimiento"
-          required
-        />
+        <div class="form-group">
+          <label for="minute">Minuto de Nacimiento:</label>
+          <input
+            type="number"
+            id="minute"
+            name="minute"
+            min="0"
+            max="59"
+            placeholder="0 - 59 min"
+            required
+          />
+        </div>
 
-        <label for="second">Segundo de Nacimiento:</label>
-        <input
-          type="number"
-          id="second"
-          name="second"
-          min="0"
-          max="59"
-          placeholder="Ingrese su segundo de nacimiento"
-          required
-        />
-
+        <div class="form-group">
+          <label for="second">Segundo de Nacimiento:</label>
+          <input
+            type="number"
+            id="second"
+            name="second"
+            min="0"
+            max="59"
+            placeholder="0 - 59 seg"
+            required
+          />
+        </div>
         <input type="submit" value="Enviar" />
       </form>
     </div>
