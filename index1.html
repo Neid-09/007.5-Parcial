@@ -36,7 +36,7 @@
 
         <div class="form-group">
           <label for="month">Mes de Nacimiento:</label>
-          <select name="month" id="month">
+          <select name="month" id="month" required>
             <option value="" disabled selected>Seleccione su mes</option>
             <option value="1">Enero</option>
             <option value="2">Febrero</option>
@@ -51,6 +51,19 @@
             <option value="11">Noviembre</option>
             <option value="12">Diciembre</option>
           </select>
+        </div>
+
+        <div class="form-group">
+          <label for="day">Día de Nacimiento:</label>
+          <input
+            type="number"
+            id="day"
+            name="day"
+            min="1"
+            max="31"
+            placeholder="Ej. 15"
+            required
+          />
         </div>
 
         <div class="form-group">

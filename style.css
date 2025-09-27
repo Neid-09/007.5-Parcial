@@ -6,8 +6,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #0f172a;
+    color: #e2e8f0;
     line-height: 1.6;
     padding: 20px;
     height: 100vh;
@@ -46,33 +46,68 @@ body {
 
 .form-group input, .form-group select {
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #334155;
     border-radius: 4px;
     font-size: 16px;
     outline: none;
     cursor: pointer;
+    background-color: #1e293b;
+    color: #e2e8f0;
 }
 
 .form-group input:focus, .form-group select:focus {
-    border-color: #007BFF;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #60a5fa;
+    box-shadow: 0 0 5px rgba(96, 165, 250, 0.6);
 }
 
 /* User index2 */
-.result-user {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+.header p {
+    border: 1px solid #334155;
+    width: fit-content;
+    padding: 2px 5px;
     border-radius: 4px;
-    width: 100%;
-    max-width: 400px;
+    background-color: #1e293b;
+}
+
+.result-user {
+    padding: 24px 28px;
+    background: linear-gradient(145deg, #1b2540, #111827);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: 16px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 18px 35px rgba(15, 23, 42, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-user:hover {
+    transform: translateY(4px);
+}
+
+.result-user p {
+    margin: 0;
+    color: #cbd5f5;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+}
+
+#name-user {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+#age-user {
+    font-weight: 600;
+    color: #93c5fd;
 }
 
 .container button, .form-user input[type="submit"] {
     padding: 10px 15px;
-    background-color: #007BFF;
-    color: #fff;
+    background-color: #1e3a8a;
+    color: #e2e8f0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -81,5 +116,5 @@ body {
 }
 
 .container button:hover, .form-user input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #1d4ed8;
 }
